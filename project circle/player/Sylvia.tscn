@@ -21,10 +21,10 @@ shape = SubResource("RectangleShape2D_fpe1o")
 scale = Vector2(18, 48)
 texture = SubResource("PlaceholderTexture2D_5k7d7")
 
-[node name="Machine_variables" type="Node" parent="." unique_id=1309583174]
+[node name="Machine_variables" type="Node" parent="CharacterBody2D" unique_id=1309583174]
 
-[node name="Idle" type="Node" parent="Machine_variables" unique_id=1996539569]
+[node name="Idle" type="Node" parent="CharacterBody2D/Machine_variables" unique_id=1996539569]
 script = ExtResource("2_t5yhl")
 
-[node name="Run" type="Node" parent="Machine_variables" unique_id=586071039]
+[node name="Run" type="Node" parent="CharacterBody2D/Machine_variables" unique_id=586071039]
 script = ExtResource("3_t5yhl")

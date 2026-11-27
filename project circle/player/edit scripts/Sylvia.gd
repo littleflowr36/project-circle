@@ -8,6 +8,7 @@ var previous_state:Playerstate:
 	get:return states[1]
 #endregion
 
+
 #region ///standard variables
 var direction :Vector2=Vector2.ZERO
 var gravity:float=90
@@ -33,10 +34,10 @@ func _physics_process(_delta: float) -> void:
 
 func initialize_states() ->void:
 	states=[]
-	for a in$"../../States_machine".get_children():	
+	for a in $Machine_variables.get_children():
 		if a is Playerstate:
 			states.append(a)
-		a.player=self
+			a.player=self
 	
 	if states.size()==0:
 		return
