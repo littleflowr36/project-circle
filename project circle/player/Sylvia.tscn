@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cv5lp50jha6vk"]
+
+[ext_resource type="Script" uid="uid://k001hj4g4d2g" path="res://player/edit scripts/Sylvia.gd" id="1_yws2h"]
+[ext_resource type="Script" uid="uid://dp8eti8o33m4y" path="res://player/edit scripts/idle.gd" id="2_t5yhl"]
+[ext_resource type="Script" uid="uid://br4ell6i70kg5" path="res://player/edit scripts/run.gd" id="3_t5yhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpe1o"]
+size = Vector2(18, 48)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5k7d7"]
+
+[node name="Sylvia" type="Node2D" unique_id=1091819577]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1158094309]
+script = ExtResource("1_yws2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=848558365]
+shape = SubResource("RectangleShape2D_fpe1o")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1249259151]
+scale = Vector2(18, 48)
+texture = SubResource("PlaceholderTexture2D_5k7d7")
+
+[node name="Machine_variables" type="Node" parent="." unique_id=1309583174]
+
+[node name="Idle" type="Node" parent="Machine_variables" unique_id=1996539569]
+script = ExtResource("2_t5yhl")
+
+[node name="Run" type="Node" parent="Machine_variables" unique_id=586071039]
+script = ExtResource("3_t5yhl")

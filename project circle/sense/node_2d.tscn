@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dum4184s6fdxs"]
+
+[ext_resource type="PackedScene" uid="uid://cv5lp50jha6vk" path="res://player/Sylvia.tscn" id="1_d7q3v"]
+
+[sub_resource type="Gradient" id="Gradient_y32ns"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fpe1o"]
+gradient = SubResource("Gradient_y32ns")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k7d7"]
+size = Vector2(64.000015, 64.435394)
+
+[node name="Node2D" type="Node2D" unique_id=337434908]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2060189683]
+position = Vector2(216, 114.375)
+scale = Vector2(7.75, 0.57421875)
+texture = SubResource("GradientTexture2D_fpe1o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=411086041]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=261698353]
+position = Vector2(0, 0.2)
+shape = SubResource("RectangleShape2D_5k7d7")
+
+[node name="Sylvia" parent="." unique_id=1091819577 instance=ExtResource("1_d7q3v")]
